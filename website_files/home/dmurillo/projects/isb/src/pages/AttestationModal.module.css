@@ -1,0 +1,43 @@
+.checkContainer {
+    margin-top: 10px;
+}
+
+.checkContainer input {
+    transform: scale(1.7);
+}
+
+.body {
+    margin-left: 5px;
+}
+
+.list {
+    padding-left: 20px;
+}
+
+.align {
+    text-align: right;
+    direction: rtl;
+}
+
+.label {
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.labelText {
+    composes: inline-multilang-support from global;
+}
+
+.continueMobile {
+    margin: 35px 0;
+    min-width: 190px;
+}
+
+.cancelMobile {
+    margin: 0 0 20px;
+    min-width: 190px;
+}
+
+.desktopButton {
+    min-width: 236px;
+}

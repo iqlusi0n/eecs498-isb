@@ -1,0 +1,56 @@
+.addressLookup {
+    max-width: 75%;
+}
+
+form {
+    position: relative;
+    margin: 0 0 100px 0;
+}
+
+@media (min-width: 769px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-28);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    form {
+        margin-bottom: 0;
+    }
+}
+
+.searchContainer {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* div to give css priority */
+
+div.searchInput {
+    margin-bottom: 0;
+}
+
+.content {
+    composes: content from global;
+}
+
+.matches {
+    margin: 0;
+    list-style-type: none;
+    padding-inline-start: 0;
+    background-color: var(--white);
+    border-top: 1px solid var(--gray);
+    /* padding 0 to override default ul element for some browsers */
+    padding: 0;
+}
+
+.voterLookupLinkButton {
+    margin-top: 150px;
+}
+
+.helpText {
+    composes: multilang-support from global;
+}

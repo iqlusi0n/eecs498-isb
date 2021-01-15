@@ -1,0 +1,43 @@
+.selectField {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.labelCopy {
+    font-size: var(--font-size-base-18);
+}
+
+.select {
+    border: 4px solid var(--black);
+    font-size: var(--font-size-base-22);
+    display: flex;
+    flex-direction: column;
+    line-height: var(--font-size-base-22);
+    margin-top: 10px;
+    padding: 18px;
+    height: 70px;
+    width: 100%;
+    -webkit-appearance: none;
+    background-image: url(../../images/chevronDownBlack.svg);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    composes: multilang-support from global;
+}
+
+.select:focus {
+    border: 5px solid var(--black);
+    outline: 4px solid var(--yellow);
+    box-shadow: 0 0 0 5px hsl(0, 0%, 0%);
+}
+
+.redOutline {
+    outline: 4px solid var(--red);
+}
+
+.redText {
+    color: var(--red);
+    font-weight: bold;
+    font-size: var(--font-size-base-18);
+    line-height: var(--font-size-base-28);
+    margin: 1px 0 0 -5px;
+}

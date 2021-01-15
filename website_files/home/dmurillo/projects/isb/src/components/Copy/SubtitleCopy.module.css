@@ -1,0 +1,37 @@
+.subtitle {
+    composes: multilang-support from global;
+    font-size: var(--font-size-base-22);
+    line-height: var(--font-size-base-24);
+    color: var(--black);
+    font-family: "Noto Sans Light", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 375px) {
+    .subtitle {
+        font-size: var(--font-size-base-14);
+        line-height: var(--font-size-base-20);
+        font-family: "Noto Sans Bold";
+        font-weight: normal;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .subtitle {
+        font-size: var(--font-size-base-16);
+        line-height: var(--font-size-base-24);
+        font-family: "Noto Sans Bold";
+        font-weight: normal;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .subtitle {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-28);
+    }
+}

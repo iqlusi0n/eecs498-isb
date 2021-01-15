@@ -1,0 +1,121 @@
+.contest {
+    position: relative;
+    width: 100%;
+    background-color: var(--white);
+}
+
+.content {
+    composes: fwhite cblack from global;
+    padding: 7px;
+}
+
+.candidates {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding: 0;
+}
+
+.heading {
+    margin-bottom: 0.25em;
+    font-family: 'Noto Sans Light';
+    font-size: var(--font-size-base-24);
+    line-height: var(--font-size-base-36);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .heading {
+        font-size: var(--font-size-base-32);
+        line-height: var(--font-size-base-48);
+    }
+}
+
+.header {
+    composes: multilang-support from global;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: var(--font-size-base-14);
+    height: 44px;
+    font-family: 'Noto Sans Bold';
+    line-height: var(--font-size-base-16);
+    vertical-align: middle;
+    padding: 17px 7px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .header {
+        height: 38px;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .header {
+        padding: 0 24px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .header {
+        height: 60px;
+        padding: 17px 24px;
+    }
+}
+
+.hr {
+    margin-bottom: 24px;
+}
+
+.analysis {
+    composes: multilang-support from global;
+    composes: fs-small b4yellow flex-row-spaced from global;
+    /* TODO(achilles) this won't work well with contrast changes */
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: rgba(255, 203, 26, 0.1);
+    font-weight: bold;
+    height: 64px;
+    width: 100%;
+}
+
+:global(.allowHover) .analysis:hover {
+    border: 4px solid var(--black);
+    background-color: var(--yellow);
+    text-decoration: underline;
+}
+
+.endOfList {
+    border-top: 1px solid;
+    composes: multilang-support from global;
+    text-align: center;
+    font-size: 17px;
+}
+
+.chevronDown {
+    composes: down-chevron from global;
+}
+
+@media (min-width: 376px) {
+    .content {
+        padding: 24px;
+    }
+}
+
+@media (min-width: 769px) {
+    .content {
+        padding: 44px;
+    }
+}

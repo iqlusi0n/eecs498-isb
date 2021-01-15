@@ -1,0 +1,120 @@
+/*******************************************************************************
+ *
+ * NAV BAR
+ *
+ ******************************************************************************/
+
+.nav {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.titleButton {
+    border-bottom: 5px solid transparent;
+    font-size: var(--font-size-base-14);
+    background: transparent;
+}
+
+:global(.allowHover) .titleButton:hover {
+    border-bottom: 5px solid var(--yellow);
+}
+
+div.titleButtonCopy {
+    margin-bottom: 0;
+}
+
+.selected {
+    border-bottom: 5px solid var(--yellow);
+}
+
+div.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+span.menuLabel {
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+.returnButton {
+    composes: fwhite from global;
+    composes: cblue from global;
+    composes: fs-small from global;
+    composes: multilang-support from global;
+    padding-bottom: 0;
+    margin-right: 14px;
+    border: none;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.returnButton svg {
+    height: 15px;
+    width: 8px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+}
+
+.returnButton path {
+    fill: var(--blue);
+}
+
+:global(.allowHover) .returnButton:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+:global(.allowHover) .returnButton:hover path {
+    fill: var(--black);
+}
+
+/*******************************************************************************
+ *
+ * HELP CONTENT
+ *
+ ******************************************************************************/
+
+.content {
+    background-color: var(--white);
+}
+
+/*******************************************************************************
+ *
+ * HELP CONTENT
+ *
+ ******************************************************************************/
+
+.footer {
+    composes: footer from global;
+    border-top: 1px solid var(--gray);
+}
+
+@media (min-width: 376px) {
+    .footer {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 90px;
+        position: relative;
+        box-shadow: none;
+    }
+}
+
+.bodyCopyLink {
+    font-size: var(--font-size-base-14);
+}
+
+@media(min-width:768px) {
+    .bodyCopyLink {
+        font-size: var(--font-size-base-16);
+    }
+}

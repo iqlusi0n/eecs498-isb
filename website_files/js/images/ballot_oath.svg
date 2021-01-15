@@ -1,0 +1,114 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "STEP-3",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  transform: "translate(-188.000000, -456.000000)",
+  id: "Group-4"
+}, React.createElement("g", {
+  transform: "translate(188.000000, 160.000000)"
+}, React.createElement("g", {
+  id: "Group-3",
+  transform: "translate(0.000000, 296.000000)"
+}, React.createElement("rect", {
+  id: "Rectangle",
+  stroke: "#979797",
+  fill: "#FFFFFF",
+  x: 0.5,
+  y: 0.5,
+  width: 196,
+  height: 294
+}), React.createElement("rect", {
+  id: "Rectangle",
+  stroke: "#979797",
+  fill: "#FFFFFF",
+  x: 24.5,
+  y: 219.5,
+  width: 153,
+  height: 59
+}), React.createElement("path", {
+  d: "M36.859375,267.273438 C42.0572917,265.979167 47.8977119,266.208725 52.453125,263.390625 C55.199701,261.69152 73.33779,242.499806 65.921875,235.492188 C62.0687043,231.85116 53.8691077,234.607836 50.3125,238.539063 C46.4178857,242.843898 45.6197557,250.285808 47.6015625,255.742188 C50.9004554,264.824814 78.6568494,264.424606 86.046875,262.28125 C89.250934,261.351965 98.4442529,258.565897 95.140625,258.101563 C89.7538817,257.34444 -6.8948073,268.332901 116.226562,250.492188 C118.052459,250.227609 101.650625,253.729702 104.6875,259.15625 C105.585827,260.761457 108.225116,260.494006 110.0625,260.40625 C114.430376,260.197635 118.817916,259.532899 123.007813,258.28125 C125.87592,257.424459 128.50351,255.831195 130.984375,254.15625 C132.140285,253.375843 132.436058,251.468553 133.757812,251.023438 C136.73736,250.020042 140.206126,251.190872 143.140625,250.0625 C146.651574,248.712472 149.103994,245.354932 152.53125,243.804688 C155.083192,242.650372 158.015625,242.664063 160.757812,242.09375",
+  id: "Path-2",
+  stroke: "#000000"
+}), React.createElement("text", {
+  id: "Ballot-Oath",
+  fontFamily: "NotoSans-Bold, Noto Sans",
+  fontSize: 20,
+  fontWeight: "bold",
+  fill: "#000000"
+}, React.createElement("tspan", {
+  x: 42,
+  y: 30
+}, "Ballot Oath")), React.createElement("text", {
+  id: "Signature",
+  fontFamily: "NotoSans-Bold, Noto Sans",
+  fontSize: 20,
+  fontWeight: "bold",
+  fill: "#000000"
+}, React.createElement("tspan", {
+  x: 24,
+  y: 203
+}, "Signature")), React.createElement("rect", {
+  id: "Rectangle",
+  fill: "#D8D8D8",
+  x: 24,
+  y: 46,
+  width: 154,
+  height: 10
+}), React.createElement("rect", {
+  id: "Rectangle-Copy-2",
+  fill: "#D8D8D8",
+  x: 24,
+  y: 66,
+  width: 154,
+  height: 10
+}), React.createElement("rect", {
+  id: "Rectangle-Copy-3",
+  fill: "#D8D8D8",
+  x: 24,
+  y: 86,
+  width: 124,
+  height: 10
+}), React.createElement("rect", {
+  id: "Rectangle-Copy-6",
+  fill: "#D8D8D8",
+  x: 24,
+  y: 116,
+  width: 154,
+  height: 10
+}), React.createElement("rect", {
+  id: "Rectangle-Copy-5",
+  fill: "#D8D8D8",
+  x: 24,
+  y: 136,
+  width: 154,
+  height: 10
+}), React.createElement("rect", {
+  id: "Rectangle-Copy-4",
+  fill: "#D8D8D8",
+  x: 24,
+  y: 156,
+  width: 124,
+  height: 10
+})))));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    width: "197px",
+    height: "295px",
+    viewBox: "0 0 197 295",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/ballot_oath.e061deb8.svg";
+export { SvgComponent as ReactComponent };

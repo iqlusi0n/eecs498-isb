@@ -1,0 +1,27 @@
+.bodyCopy {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+
+.voterLookupFooterButton svg {
+    margin-left: 16px;
+}
+
+/* Unsure why these are being offset? -rp
+
+.voterLookupFooterButton {
+  margin-right: 12px !important;
+}
+
+@media (min-width: 768px) {
+  .voterLookupFooterButton {
+    margin-right: 24px !important;
+  }
+}
+
+@media(min-width: 1200px) {
+  .voterLookupFooterButton {
+    margin-right: 184px !important;
+  }
+}
+*/

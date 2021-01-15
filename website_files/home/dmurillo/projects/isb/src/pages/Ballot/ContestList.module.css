@@ -1,0 +1,81 @@
+.contestList {
+    /* TODO(achilles) figure out how to get the list to fill its height */
+    /* height: 95%; */
+    width: 100%;
+    position: relative;
+    height: calc(var(--ninety-vh) - var(--header-height) - var(--footer-height));
+}
+
+@media (min-width: 769px) {
+    .contentList {
+        height: calc(var(--ninety-vh) - var(--header-height-large) - var(--footer-height-large));
+    }
+}
+
+.list {
+    height: calc(100% - 120px);
+    overflow-y: auto;
+    background-color: var(--white);
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .list {
+        max-height: calc(var(--ninety-vh) - var(--header-height-large) - (var(--footer-height-large) * 2) - 104px);
+    }
+}
+
+.header {
+    composes: multilang-support from global;
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size-base-14);
+    line-height: var(--font-size-base-16);
+    align-items: center;
+}
+
+.scroller,
+.header {
+    height: 60px;
+    width: 100%;
+    border: 0;
+    padding-left: 31px;
+    padding-right: 31px;
+    font-weight: bold;
+}
+
+.header {
+    padding: 0 7px;
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .header {
+        padding: 0 24px;
+    }
+}
+
+.end {
+    composes: multilang-support from global;
+    border-top: 1px solid var(--gray);
+    color: var(--gray);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.moreButton {
+    height: 60px;
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .moreButton {
+        height: 60px;
+    }
+}

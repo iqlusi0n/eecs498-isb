@@ -1,0 +1,459 @@
+/*******************************************************************************
+ *
+ * TOP SECTION STYLES
+ *
+ ******************************************************************************/
+
+.settingsTop {
+    composes: flex-row-spaced from global;
+    align-items: baseline;
+    /* height: 100px; */
+    width: 100%;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.returnButton {
+    composes: fwhite from global;
+    composes: cblue from global;
+    composes: fs-small from global;
+    composes: multilang-support from global;
+    padding-bottom: 0;
+    margin-right: 14px;
+    border: none;
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.returnButton svg {
+    height: 15px;
+    width: 8px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+}
+
+.returnButton path {
+    fill: var(--blue);
+}
+
+:global(.allowHover) .returnButton:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+:global(.allowHover) .returnButton:hover path {
+    fill: var(--black);
+}
+
+/*******************************************************************************
+ *
+ * BOTTOM SECTION STYLES
+ *
+ ******************************************************************************/
+
+.settingsBottom {
+    composes: flex-row-centered from global;
+    height: 120px;
+}
+
+.closeButton {
+    composes: yellow-centered-button from global;
+    composes: multilang-support from global;
+    width: 235px;
+    height: 48px;
+    border: 0;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .closeButton {
+        height: 64px;
+    }
+}
+
+/*******************************************************************************
+ *
+ * MIDDLE SECTION STYLES
+ *
+ ******************************************************************************/
+
+.settingsMiddle {
+    min-height: 100%;
+    padding: 10px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .settingsMiddle {
+        padding: 0;
+    }
+}
+
+/*******************************************************************************
+ *
+ * SETTINGS OPTION STYLES
+ *
+ ******************************************************************************/
+
+@media (max-width: 767px) {
+    .menuLink {
+        width: 100%;
+        height: 55px;
+    }
+}
+
+@media (max-width: 767px) {
+    .middleMenu {
+        padding: 0;
+    }
+}
+
+span.menuLabel {
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+.options {
+    composes: flex-column-centered from global;
+    min-height: 100%;
+}
+
+.settingsOption {
+    composes: flex-column-spaced fwhite b1gray from global;
+    align-items: center;
+    padding-bottom: 20px;
+    height: 175px;
+    width: 175px;
+    cursor: pointer;
+}
+
+.settingsOption>svg {
+    margin: auto;
+}
+
+.settingsOption path {
+    fill: var(--black);
+}
+
+.optionButton {
+    composes: b1yellow yellow-centered-button fs-medium from global;
+    composes: multilang-support from global;
+    width: 129px;
+}
+
+/*******************************************************************************
+ *
+ * TEXT SIZE SETTINGS
+ *
+ ******************************************************************************/
+
+.textSettings {
+    composes: flex-row-spaced cblack from global;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.smallWrapper,
+.mediumWrapper,
+.largeWrapper {
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.textOption {
+    composes: flex-row-centered bold from global;
+    outline: 1px solid var(--gray);
+}
+
+.sizeTitle {
+    composes: fs-bodyCopy cblack from global;
+    composes: multilang-support from global;
+    font-family: "Noto Sans Bold";
+}
+
+/********************************************************
+ * styles which highlight whichever option is selected and on hover **
+ ********************************************************/
+
+.small .smallWrapper {
+    outline: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+:global(.allowHover) .smallWrapper:hover {
+    outline: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+.small .smallWrapper .textOption {
+    outline: 3px solid var(--black);
+    background-color: var(--white);
+}
+
+:global(.allowHover) .smallWrapper .textOption:hover {
+    outline: 3px solid var(--black);
+    background-color: var(--white);
+}
+
+.medium .mediumWrapper {
+    outline: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+:global(.allowHover) .mediumWrapper:hover {
+    outline: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+.medium .mediumWrapper .textOption {
+    outline: 3px solid var(--black);
+    background-color: var(--white);
+}
+
+:global(.allowHover) .mediumWrapper .textOption:hover {
+    outline: 3px solid var(--black);
+    background-color: var(--white);
+}
+
+.large .largeWrapper {
+    outline: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+:global(.allowHover) .largeWrapper:hover {
+    outline: 2px solid var(--black);
+    background-color: var(--white);
+}
+
+.large .largeWrapper .textOption {
+    outline: 3px solid var(--black);
+    background-color: var(--white);
+}
+
+:global(.allowHover) .largeWrapper .textOption:hover {
+    outline: 3px solid var(--black);
+    background-color: var(--white);
+}
+
+/********************************************************
+ ********************************************************
+ ********************************************************/
+
+.smallWrapper .textOption {
+    height: 50px;
+    width: 50px;
+}
+
+.mediumWrapper .textOption {
+    height: 70px;
+    width: 70px;
+}
+
+.largeWrapper .textOption {
+    height: 100px;
+    width: 100px;
+}
+
+.textOption>svg {
+    width: 80%;
+    height: 80%;
+    filter: invert(var(--icon-invert));
+}
+
+.sampleTextWrapper {
+    max-width: 100%;
+}
+
+.sampleTextTitle {
+    composes: fs-bodyCopy cblack from global;
+    composes: inline-multilang-support from global;
+    margin-bottom: 7px;
+}
+
+.sampleTextDivider {
+    border-left: 1px solid var(--black);
+    margin: 0 7px;
+}
+
+.sampleTextSelection {
+    composes: inline-multilang-support from global;
+    font-family: "Noto Sans Bold";
+    margin-left: 12px;
+    padding-left: 12px;
+}
+
+.sampleText {
+    composes: flex-row-centered fwhite b2gray fs-bodyCopy cblack from global;
+    padding: 20px;
+    composes: content-flip from global;
+    /* composes: flex-row-centered fwhite b2gray fs-small cblack from global;
+  padding: 0 20px;
+  height: var(--sample-text-height);
+  width: 300px;
+  max-width: 100%; */
+}
+
+@media (min-width: 768px) {
+    .sampleText {
+        width: 420px;
+    }
+}
+
+/*******************************************************************************
+ *
+ * CONTRAST SETTINGS
+ *
+ ******************************************************************************/
+
+.spacer {
+    width: 112px;
+}
+
+.contrastSettings {
+    composes: flex-column-centered from global;
+    min-height: 100%;
+}
+
+.high .highBox {
+    outline: 4px solid var(--black);
+}
+
+.low .lowBox {
+    outline: 4px solid var(--black);
+}
+
+.highBox,
+.lowBox {
+    width: calc(100% - 8px);
+    margin: 0 auto;
+    height: auto;
+    padding: 30px 26px 30px 26px;
+}
+
+:global(.allowHover) .highBox:hover,
+:global(.allowHover) .lowBox:hover {
+    outline: 4px solid var(--black);
+}
+
+.lowContrast,
+.highContrast {
+    padding: 22px 16px 22px 16px;
+}
+
+.lowContrast {
+    background-color: #4A4A4A;
+    color: #979797;
+    border: 2px solid #979797;
+    composes: multilang-support from global;
+}
+
+.highContrast {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #000000;
+    composes: multilang-support from global;
+}
+
+.optionTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.optionText {
+    font-size: 18px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .contrastSettings {
+        flex-direction: row;
+    }
+    .options {
+        flex-direction: row;
+    }
+}
+
+.textSettingsWrapper {
+    max-height: 410px;
+    overflow-y: auto;
+}
+
+@media(min-width: 768px) {
+    .highBox,
+    .lowBox {
+        width: 300px;
+        height: 177px;
+    }
+    /* .settingsMiddle {
+    height: 270px;
+  } */
+    .textSettingsWrapper {
+        height: 363px;
+    }
+    .textSettings {
+        max-width: 425px;
+        margin: 0 auto;
+    }
+    .sampleTextWrapper {
+        max-width: 420px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+    .options {
+        composes: flex-row-centered from global;
+        padding-top: 44px;
+        padding-bottom: 46px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* .settingsMiddle {
+    height: 270px;
+  } */
+    .options {
+        composes: flex-row-centered from global;
+    }
+    .textSettingsWrapper {
+        height: 230px;
+        display: flex;
+    }
+    .textSettings {
+        padding-left: 40px;
+        padding-right: 20px;
+        max-width: 425px;
+        margin: 0;
+        justify-content: space-between;
+        flex-wrap: inherit;
+    }
+    .smallWrapper,
+    .mediumWrapper,
+    .largeWrapper {
+        margin-right: 40px;
+    }
+    .smallWrapper .textOption {
+        height: 70px;
+        width: 70px;
+    }
+    .mediumWrapper .textOption {
+        height: 100px;
+        width: 100px;
+    }
+    .largeWrapper .textOption {
+        height: 145px;
+        width: 145px;
+    }
+    .highBox,
+    .lowBox {
+        width: 380px;
+        height: 200px;
+    }
+}

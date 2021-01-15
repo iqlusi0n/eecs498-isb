@@ -1,0 +1,44 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "SETTINGS",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  id: "Settings",
+  transform: "translate(-926.000000, -318.000000)"
+}, React.createElement("g", {
+  id: "Group-6",
+  transform: "translate(406.000000, 300.000000)"
+}, React.createElement("g", {
+  id: "baseline-screen_lock_portrait-24px",
+  transform: "translate(505.000000, 14.500000)"
+}, React.createElement("polygon", {
+  id: "Path",
+  points: "0 0.5 70 0.5 70 70.5 0 70.5"
+}), React.createElement("path", {
+  d: "M29.2857143,47.8181818 L40.7142857,47.8181818 C42.2857143,47.8181818 43.5714286,46.4886364 43.5714286,44.8636364 L43.5714286,36 C43.5714286,34.375 42.2857143,33.0454545 40.7142857,33.0454545 L40.7142857,30.0909091 C40.7142857,26.8113636 38.1428571,24.1818182 35,24.1818182 C31.8285714,24.1818182 29.2857143,26.8409091 29.2857143,30.0909091 L29.2857143,33.0454545 C27.7142857,33.0454545 26.4285714,34.375 26.4285714,36 L26.4285714,44.8636364 C26.4285714,46.4886364 27.7142857,47.8181818 29.2857143,47.8181818 Z M31.5714286,30.0909091 C31.5714286,28.1409091 33.1142857,26.5454545 35,26.5454545 C36.8857143,26.5454545 38.4285714,28.1409091 38.4285714,30.0909091 L38.4285714,33.0454545 L31.5714286,33.0454545 L31.5714286,30.0909091 L31.5714286,30.0909091 Z M49.2857143,3.5 L20.7142857,3.5 C17.5714286,3.5 15,6.15909091 15,9.40909091 L15,62.5909091 C15,65.8409091 17.5714286,68.5 20.7142857,68.5 L49.2857143,68.5 C52.4285714,68.5 55,65.8409091 55,62.5909091 L55,9.40909091 C55,6.15909091 52.4285714,3.5 49.2857143,3.5 Z M49.2857143,56.6818182 L20.7142857,56.6818182 L20.7142857,15.3181818 L49.2857143,15.3181818 L49.2857143,56.6818182 Z",
+  id: "Shape",
+  fill: "#000000",
+  fillRule: "nonzero"
+})))));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    focusable: "false",
+    width: "40px",
+    height: "65px",
+    viewBox: "0 0 40 65",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/privacy.6a97b2bb.svg";
+export { SvgComponent as ReactComponent };

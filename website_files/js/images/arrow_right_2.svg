@@ -1,0 +1,35 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "Symbols",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  id: "UI/Actions/Button/Primary/YellowStrokedBlack",
+  transform: "translate(-202.000000, -23.000000)",
+  fillRule: "nonzero"
+}, React.createElement("path", {
+  d: "M212.999473,27.80262 C213.51955,27.341234 214.298854,27.4168984 214.728157,27.9651134 C215.142546,28.4938615 215.076391,29.2720337 214.576267,29.7169519 L207.288998,36.1968538 C207.068413,36.3935594 206.788606,36.5 206.500228,36.5 C206.212012,36.5 205.932378,36.3936771 205.711686,36.1973239 L198.42399,29.7170404 C197.923509,29.2722472 197.85747,28.4935144 198.271792,27.9653783 C198.70031,27.417844 199.481009,27.3419661 200.000984,27.80262 L206.500228,33.5820878 L212.999473,27.80262 Z",
+  id: "NextArrow_black",
+  transform: "translate(206.499994, 32.000006) scale(-1, -1) rotate(-270.000000) translate(-206.499994, -32.000006) "
+})));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    focusable: "false",
+    width: 7.5,
+    height: "12px",
+    viewBox: "0 0 9 18",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/arrow_right_2.338a4f2c.svg";
+export { SvgComponent as ReactComponent };

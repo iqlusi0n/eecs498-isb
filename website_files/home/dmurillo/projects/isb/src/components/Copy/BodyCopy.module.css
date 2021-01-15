@@ -1,0 +1,15 @@
+.body {
+    composes: fs-bodyCopy from global;
+    composes: multilang-support from global;
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+    color: var(--black);
+    margin-bottom: var(--body-copy-margin);
+    word-wrap: break-word;
+}
+
+/* Account for situations when component renders nodes as 
+text prop and contain text in width */
+
+.body>div {
+    word-wrap: break-word;
+}

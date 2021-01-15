@@ -1,0 +1,21 @@
+.labelCopy {
+    font-size: var(--font-size-base-14);
+    font-family: "Noto Sans Bold", Helvetica, Arial, sans-serif;
+    composes: inline-multilang-support from global;
+}
+
+.center {
+    text-align: center;
+}
+
+.black {
+    color: var(--black);
+}
+
+.blackNoVar {
+    color: black;
+}
+
+.white {
+    color: var(--white);
+}

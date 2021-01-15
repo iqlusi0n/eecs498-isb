@@ -1,0 +1,36 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "symbols",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  id: "BUTTON/BACK",
+  transform: "translate(0.000000, -6.000000)",
+  fillRule: "nonzero"
+}, React.createElement("g", {
+  id: "ICONS/CARROT/BAC"
+}, React.createElement("path", {
+  d: "M10.2348181,10.2689848 C10.6937083,9.85886326 11.3813273,9.92612055 11.7601231,10.4134235 C12.1257595,10.8834224 12.0673871,11.575132 11.6261023,11.9706155 L5.19617867,17.7305363 C5.00154503,17.905386 4.75465676,18 4.50020711,18 C4.24589912,18 3.99916412,17.9054906 3.80443664,17.7309542 L-2.62586502,11.9706941 C-3.06746424,11.5753218 -3.12573363,10.8831139 -2.76015662,10.413659 C-2.38205384,9.92696114 -1.69320392,9.85951405 -1.23440386,10.2689848 L4.50020711,15.4062966 L10.2348181,10.2689848 Z",
+  transform: "translate(4.500000, 14.000000) scale(-1, 1) rotate(-90.000000) translate(-4.500000, -14.000000) "
+}))));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    focusable: "false",
+    width: "9px",
+    height: "16px",
+    viewBox: "0 0 9 16",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/left_carrot.f8de7820.svg";
+export { SvgComponent as ReactComponent };

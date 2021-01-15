@@ -1,0 +1,48 @@
+.oath {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 29px;
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+}
+
+.left div,
+.left p {
+    margin-bottom: 21px;
+}
+
+.right {
+    flex: 0.4;
+}
+
+.findYourContainer {
+    margin-left: auto;
+}
+
+.bodyCopy {
+    font-size: var(--font-size-base-18);
+}
+
+@media (max-width: 768px) {
+    .oath {
+        flex-flow: column;
+    }
+}
+
+@media(min-width: 768px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-14);
+    }
+}
+
+@media(min-width: 1199px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-20);
+    }
+}

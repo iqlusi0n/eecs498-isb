@@ -1,0 +1,44 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "SETTINGS",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  id: "Settings",
+  transform: "translate(-801.000000, -318.000000)",
+  fill: "#000000",
+  fillRule: "nonzero"
+}, React.createElement("g", {
+  id: "Group-3",
+  transform: "translate(515.000000, 300.000000)"
+}, React.createElement("g", {
+  id: "Group-2",
+  transform: "translate(230.000000, 0.000000)"
+}, React.createElement("g", {
+  id: "baseline-brightness_medium-24px",
+  transform: "translate(54.000000, 16.000000)"
+}, React.createElement("path", {
+  d: "M60.0495137,45.9504863 L70,36 L60.0495137,26.0495137 L60.0495137,11.9504863 L45.9504863,11.9504863 L36,2 L26.0495137,11.9504863 L11.9504863,11.9504863 L11.9504863,26.0495137 L2,36 L11.9504863,45.9504863 L11.9504863,60.0495137 L26.0495137,60.0495137 L36,70 L45.9504863,60.0495137 L60.0495137,60.0495137 L60.0495137,45.9504863 Z M36,54.0371353 L36,17.9628647 C45.9504863,17.9628647 54.0371353,26.0495137 54.0371353,36 C54.0371353,45.9504863 45.9504863,54.0371353 36,54.0371353 Z",
+  id: "Shape"
+}))))));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    focusable: "false",
+    width: "68px",
+    height: "68px",
+    viewBox: "0 0 68 68",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/contrast.ad44c06a.svg";
+export { SvgComponent as ReactComponent };

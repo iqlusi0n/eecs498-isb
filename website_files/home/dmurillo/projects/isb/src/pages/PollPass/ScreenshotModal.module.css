@@ -1,0 +1,7 @@
+.qrContainer {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 20px;
+    border: 1px solid var(--gray);
+    background-color: white;
+}

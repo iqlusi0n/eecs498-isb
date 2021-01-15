@@ -1,0 +1,40 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "Symbols",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  id: "Module/VoteSelection/Unselected",
+  transform: "translate(-559.000000, -19.000000)"
+}, React.createElement("g", {
+  id: "outline-info-24px",
+  transform: "translate(556.000000, 16.000000)"
+}, React.createElement("polygon", {
+  id: "Path",
+  points: "0 0 40 0 40 40 0 40"
+}), React.createElement("path", {
+  d: "M18.8095238,12.1428571 L22.1428571,12.1428571 L22.1428571,15.4761905 L18.8095238,15.4761905 L18.8095238,12.1428571 Z M18.8095238,18.8095238 L22.1428571,18.8095238 L22.1428571,28.8095238 L18.8095238,28.8095238 L18.8095238,18.8095238 Z M20.4761905,3.80952381 C11.2761905,3.80952381 3.80952381,11.2761905 3.80952381,20.4761905 C3.80952381,29.6761905 11.2761905,37.1428571 20.4761905,37.1428571 C29.6761905,37.1428571 37.1428571,29.6761905 37.1428571,20.4761905 C37.1428571,11.2761905 29.6761905,3.80952381 20.4761905,3.80952381 Z M20.4761905,33.8095238 C13.1261905,33.8095238 7.14285714,27.8261905 7.14285714,20.4761905 C7.14285714,13.1261905 13.1261905,7.14285714 20.4761905,7.14285714 C27.8261905,7.14285714 33.8095238,13.1261905 33.8095238,20.4761905 C33.8095238,27.8261905 27.8261905,33.8095238 20.4761905,33.8095238 Z",
+  id: "Shape",
+  fillRule: "nonzero"
+}))));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    focusable: "false",
+    width: "35px",
+    height: "35px",
+    viewBox: "0 0 35 35",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/info_2.c331f146.svg";
+export { SvgComponent as ReactComponent };

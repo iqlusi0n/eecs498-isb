@@ -1,0 +1,16 @@
+.linkButton {
+    composes: multilang-support from global;
+    background-color: transparent;
+    color: var(--blue);
+    font-size: var(--font-size-base-16);
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+
+:global(.allowHover) .linkButton:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}

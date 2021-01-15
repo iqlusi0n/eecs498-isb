@@ -1,0 +1,13 @@
+.generate {
+    composes: yellow-centered-button from global;
+    width: var(--lg-btn-width);
+    max-width: 100%;
+}
+
+.hiddenDesktop {
+    composes: hiddenDesktop from global;
+}
+
+.hiddenMobileTablet {
+    composes: hiddenMobileTablet from global;
+}

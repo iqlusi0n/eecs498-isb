@@ -1,0 +1,200 @@
+.page {
+    composes: column-page from global;
+    overflow-y: auto;
+    padding: 40px 20px;
+    min-height: 100%;
+    align-items: normal;
+    height: auto;
+    display: flex;
+    composes: content-flip from global;
+}
+
+.hr {
+    margin-bottom: 20px;
+    border: 1px solid #979797;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .page {
+        padding: 40px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    .page {
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+    }
+}
+
+.modal {
+    composes: column-page from global;
+    /* min-height: 100%;
+  max-height: var(--seventy-vh);
+  height: 443px;
+  overflow-y: auto; */
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* min-height: 100%; */
+    /* max-height: var(--seventy-vh); */
+}
+
+@media (min-width: 992px) {
+    .modal {
+        padding: 20px;
+    }
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+/* Medium devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    .header {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+}
+
+.body {
+    display: flex;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-18);
+        line-height: var(--font-size-base-28);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-32);
+    }
+}
+
+.textBody {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .textBody {
+        flex-direction: row;
+    }
+}
+
+.choiceContainer {
+    composes: fwhite from global;
+    border: 1px solid var(--black);
+    /* height: var(--privacy-choice-height); */
+    display: flex;
+    max-width: 410px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 50%;
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .choiceContainer {
+        min-height: 336px;
+    }
+}
+
+.choice {
+    /* need this for IE11 */
+    width: 100%;
+}
+
+.choiceContainer:first-child {
+    margin-right: 20px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .choiceContainer {
+        padding: 32px;
+    }
+}
+
+.choiceContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.isSelected:before {
+    outline: 3px solid var(--black);
+    background-color: var(--mgray);
+}
+
+.isUnselected {
+    border: 4px solid var(--yellow);
+    background-color: var(--white);
+}
+
+.privacyChoiceText1 {
+    margin-bottom: 22px;
+    font-size: var(--font-size-base-18);
+    line-height: var(--font-size-base-28);
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .privacyChoiceText1 {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-32);
+    }
+}
+
+.privacyChoiceText2 {
+    display: flex;
+}
+
+.privacyBtn {
+    composes: yellow-centered-button from global;
+    border: 1px solid var(--yellow);
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.privacyBtn svg {
+    flex: 0 0 auto;
+    height: var(--font-size-base-14);
+    width: var(--font-size-base-14);
+    margin-right: 10px;
+}
+
+.privacyBtnCopy {
+    composes: inline-multilang-support from global;
+}
+
+@media (max-width: 375px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-18);
+    }
+}

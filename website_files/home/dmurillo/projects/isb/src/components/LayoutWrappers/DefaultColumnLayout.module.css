@@ -1,0 +1,40 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: var(--lgray);
+    composes: content-flip from global;
+}
+
+.content {
+    composes: content from global;
+    width: 90%;
+    padding: 16px 5.25px 24px 5.25px;
+}
+
+@media (max-width: 374px) {
+    .content {
+        padding: 16px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 100%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .content {
+        width: 1200px;
+        padding-top: 45px;
+    }
+}

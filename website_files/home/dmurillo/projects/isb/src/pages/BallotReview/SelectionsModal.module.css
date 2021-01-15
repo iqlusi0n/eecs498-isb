@@ -1,0 +1,11 @@
+.selectionsModalButton {
+    height: 44px;
+}
+
+@media (min-width: 768px) {
+    .selectionsModalButton {
+        height: 64px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

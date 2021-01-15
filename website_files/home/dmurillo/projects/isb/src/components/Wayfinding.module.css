@@ -1,0 +1,390 @@
+.horizontal {
+    position: relative;
+    z-index: 10;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 520px;
+}
+
+.vertical>div,
+.horizontal>div {
+    position: relative;
+}
+
+.vertical>div:first-child .step,
+.horizontal>div:first-child .step {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.vertical>div:last-child .step,
+.horizontal>div:last-child .step {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .horizontal {
+        display: flex;
+        flex-direction: row;
+    }
+    .horizontal>div {
+        flex: 0 1 33%;
+    }
+    .horizontal>div:first-child .step {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+    }
+    .horizontal>div:last-child .step {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+}
+
+.vertical>div:last-child .pointy,
+.horizontal>div:last-child .pointy {
+    display: none;
+}
+
+.step {
+    composes: flblue cblack from global;
+    border-bottom: 1px solid var(--blue);
+    min-height: 100%;
+    padding: 24px 25px;
+}
+
+.ravStepWrap .step {
+    background-color: var(--mgray);
+    border-bottom: 1px solid var(--black);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .horizontal>div .step {
+        border-bottom: 0;
+        border-right: 1px solid var(--blue);
+    }
+    .horizontal>.ravStepWrap .step {
+        border-right: 1px solid var(--black);
+    }
+}
+
+.vertical>div:last-child .step,
+.horizontal>div:last-child .step {
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .horizontal>div:last-child .step {
+        border-right: none;
+        border-bottom: none;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .vertical .step {
+        padding: 48px;
+    }
+}
+
+/* so that we can absolutely position the pointy thing */
+
+.pointyWrap {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    pointer-events: none;
+}
+
+.newPointy {
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 10px solid var(--blue);
+    transform: rotate(-90deg);
+    display: none;
+    position: absolute;
+    bottom: -21px;
+    left: calc(50% - 8px);
+    z-index: 10;
+}
+
+.newPointyInner {
+    position: relative;
+    top: -14px;
+    left: 2px;
+    width: 0;
+    height: 0;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-right: 8px solid var(--lblue);
+}
+
+/* TODO(achilles) I don't know what to call this element*/
+
+.pointy {
+    border-bottom: 1px solid var(--blue);
+    border-left: 1px solid var(--blue);
+    display: none;
+    position: absolute;
+    bottom: -9px;
+    left: calc(50% - 9px);
+    background-color: var(--lblue);
+    width: 18px;
+    height: 18px;
+    transform: rotate(-45deg);
+    z-index: 10;
+}
+
+.ravStepWrap .pointy {
+    background-color: var(--mgray);
+    border-bottom: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .horizontal .pointy {
+        border-left: none;
+        border-bottom: 1px solid var(--blue);
+        border-right: 1px solid var(--blue);
+        bottom: auto;
+        left: auto;
+        top: 35px;
+        right: -9px;
+    }
+    .horizontal .ravStepWrap .pointy {
+        border-bottom: 1px solid var(--black);
+        border-right: 1px solid var(--black);
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .horizontal .newPointy {
+        top: 24px;
+        left: auto;
+        right: -10px;
+        transform: rotate(180deg);
+    }
+}
+
+.current {
+    position: relative;
+}
+
+.current .pointy {
+    display: block;
+    background-color: var(--blue);
+}
+
+.current .newPointy {
+    display: block;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .top {
+        min-height: 4.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .top {
+        min-height: 3rem;
+        min-height: 46px;
+    }
+}
+
+.stepNum {
+    composes: flex-row-centered cwhite fblue from global;
+    border-radius: 16px;
+    font-size: var(--font-size-base-14);
+    font-weight: bold;
+    height: 32px;
+    margin-right: 14px;
+    width: 32px;
+    flex: 0 0 auto;
+}
+
+.ravStepWrap .stepNum {
+    background-color: var(--black);
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .vertical .stepNum {
+        border-radius: 24px;
+        height: 48px;
+        width: 48px;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.title {
+    /* composes: fs-large from global; */
+    font-size: var(--font-size-base-16);
+    font-family: "Noto Sans Bold";
+    line-height: var(--font-size-base-16);
+    composes: multilang-support from global;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .title {
+        font-size: var(--font-size-base-18);
+        line-height: var(--font-size-base-24);
+    }
+    .stepNum {
+        height: 48px;
+        width: 48px;
+        border-radius: 2.6rem;
+        font-size: 20px;
+    }
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size-base-14);
+    line-height: var(--font-size-base-14);
+    composes: multilang-support from global;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .status {
+        font-size: var(--font-size-base-14);
+        line-height: var(--font-size-base-24);
+    }
+    .check {
+        height: 2rem;
+        width: 2.4rem;
+    }
+}
+
+.check {
+    height: 20px;
+    width: 20px;
+    filter: invert(var(--icon-invert));
+    composes: multilang-support from global;
+}
+
+.expander {
+    border-bottom: 1px solid var(--black);
+    display: flex;
+    padding-bottom: 8px;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 14px;
+}
+
+.bottom {
+    composes: fs-bodyCopy from global;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+    composes: multilang-support from global;
+}
+
+/*******************************************************************************
+ *
+ * LANDING PAGE STEP OVERRIDES
+ *
+ ******************************************************************************/
+
+.landingOverride .expander {
+    border-bottom: 1px solid var(--black);
+}
+
+.landingOverride .pointy {
+    display: block;
+}
+
+.landingOverride>.stepWrap:last-child .pointy {
+    display: none;
+}
+
+/*******************************************************************************
+ *
+ * CURRENT STEP OVERRIDES
+ *
+ ******************************************************************************/
+
+.current .step {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.ravStepWrap .currentStep {
+    border-bottom: 1px solid var(--blue);
+}
+
+.current .stepNum {
+    background: var(--white);
+    color: var(--black);
+}
+
+.ravStepWrap .currentPointy {
+    border-bottom: 1px solid var(--blue);
+    border-left: 1px solid var(--blue);
+}
+
+.horizontal .ravStepWrap .currentPointy {
+    border-bottom: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+}
+
+/*******************************************************************************
+ *
+ * CURRENT STEP OVERRIDES
+ *
+ ******************************************************************************/
+
+.ravStepWrap .previousStepNum {
+    background: var(--blue);
+}
+
+.stepNum {
+    composes: multilang-support from global;
+}
+
+.current .expander {
+    border-bottom: 1px solid var(--white);
+}

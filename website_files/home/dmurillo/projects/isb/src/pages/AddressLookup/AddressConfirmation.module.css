@@ -1,0 +1,72 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right {
+    flex: 0.9;
+}
+
+.mapLoad {
+    min-height: 100%;
+}
+
+.mapContainer {
+    composes: b4black from global;
+    composes: content-flip from global;
+    height: 400px;
+}
+
+.mapElement {
+    min-height: 100%;
+}
+
+.addressCopy {
+    /* Since this is always in English, we want to prevent it being treated like a right to left language when Farsi is selected for the site */
+    composes: content-flip from global;
+    direction: ltr;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-flow: column;
+    }
+    .right {
+        padding: 30px 0;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .addressCopy {
+        font-size: var(--font-size-base-18);
+        line-height: var(--font-size-base-28);
+    }
+    .row {
+        flex-flow: row;
+    }
+    .left {
+        flex: 0 0 50%;
+    }
+    .right {
+        flex: 0 0 50%;
+        padding-top: 0;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .addressCopy {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-32);
+    }
+}
+
+@media (max-width: 375px) {
+    .addressCopy {
+        font-size: var(--font-size-base-18);
+    }
+}

@@ -1,0 +1,27 @@
+.match {
+    composes: content-flip from global;
+    border-left: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+:global(.allowHover) .match:hover,
+:global(.allowHover) .match:hover .matchInner {
+    background-color: var(--yellow);
+}
+
+.match.active,
+.match.active .matchInner {
+    background-color: var(--yellow);
+}
+
+.matchInner {
+    /* to override default font and background-color for buttons */
+    font: inherit;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: var(--font-medium);
+    font-family: Arial;
+}

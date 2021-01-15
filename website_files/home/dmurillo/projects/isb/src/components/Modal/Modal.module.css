@@ -1,0 +1,291 @@
+.modalWrapper {
+    composes: flex-row-centered from global;
+    position: fixed;
+    background-color: rgba(30, 30, 30, 0.5);
+    height: calc(var(--hundred-vh) - var(--header-height));
+    overflow-y: auto;
+    top: var(--header-height);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .modalWrapper {
+        height: calc(var(--hundred-vh) - var(--header-height));
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .modalWrapper {
+        top: var(--header-height-large);
+        height: calc(var(--hundred-vh) - var(--header-height-large));
+    }
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) and (min-width: 1200px) {
+    /* IE10+ CSS */
+    .modalWrapper {
+        top: var(--header-height);
+    }
+}
+
+@media (max-width: 767px) {
+    .modalWrapper.hideMobileFooter {
+        height: calc(var(--hundred-vh) - var(--header-height));
+    }
+}
+
+.isMedPriority {
+    z-index: 10005;
+}
+
+.dir {
+    direction: rtl;
+}
+
+.isPriority {
+    z-index: 10010;
+}
+
+.mobileFooterIsPriority {
+    z-index: 20010;
+}
+
+.parentIsRoot {
+    top: var(--header-height);
+    height: calc(var(--hundred-vh) - var(--header-height) - var(--footer-height));
+    overflow-y: auto;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .parentIsRoot {
+        top: var(--header-height);
+        height: calc(var(--hundred-vh) - var(--header-height));
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .parentIsRoot {
+        top: var(--header-height-large);
+        height: calc(var(--hundred-vh) - var(--header-height-large));
+    }
+}
+
+.modal {
+    composes: centered-content-column from global;
+    flex-basis: content;
+    z-index: 10000;
+    position: absolute;
+    top: calc(var(--header-height-large) + 20px);
+    /* Using both top and bottom forces full height when flexed */
+    /* bottom: calc(var(--footer-height) + 2rem); */
+    left: 14px;
+    right: 14px;
+    /*
+  overflow-y: auto;
+  max-height: calc(var(--hundred-vh) - (var(--header-height) + 2rem) - (var(--footer-height) + 2rem));
+  */
+    width: calc(100vw - 28px);
+    border-radius: 10px;
+    /* TODO: improve.  for better centering of modal in IE11 */
+    /* -ms-transform: translate(33%); */
+    padding-bottom: 20px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .modal {
+        box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, .5);
+        margin: auto;
+        max-width: 696px;
+        padding-bottom: 0;
+        top: calc(var(--header-height-large) + 20px);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .modal {
+        max-width: 1062px;
+        width: 1062px;
+        padding-bottom: 0;
+        top: calc(var(--header-height-large) + 20px);
+    }
+}
+
+/* If modal parent is root, that means that there is no content-flip applied from
+  a parent header / body / footer component, so need to apply it here */
+
+.wrapperParentIsRoot {
+    composes: content-flip from global;
+    top: 20px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .wrapperParentIsRoot {
+        top: 48px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .wrapperParentIsRoot {
+        top: 78px;
+    }
+}
+
+.modal:focus {
+    outline: none;
+}
+
+.threeRowContent {
+    /* height: auto; */
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.top,
+.middle,
+.bottom {
+    padding: 10px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .top {
+        padding: 10px 22px;
+    }
+}
+
+.top {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 5.4rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .top {
+        border-radius: 0;
+        min-height: 6rem;
+    }
+}
+
+.middle {
+    composes: overrideModalContentBackground from global;
+    background-color: var(--lgray);
+    min-height: 180px;
+    border-top: 1px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
+    padding: 14px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .middle {
+        padding: 24px;
+    }
+}
+
+.bottom {
+    composes: footer from global;
+    position: fixed;
+    z-index: 20000;
+    justify-content: space-around;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .bottom {
+        height: 112px;
+    }
+}
+
+.stickyBottom {
+    composes: footer from global;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20000;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.mobileBottom {
+    background-color: var(--white);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 48px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .bottom {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 119px;
+        position: relative;
+        box-shadow: none;
+    }
+    .middle {
+        max-height: 640px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bottom {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 119px;
+        position: relative;
+        box-shadow: none;
+    }
+    .middle {
+        overflow-y: auto;
+        max-height: 320px;
+    }
+    .top {
+        height: 96px;
+    }
+    .top .titleCopy {
+        margin-bottom: 0;
+    }
+    .top,
+    .bottom {
+        padding: 21px;
+    }
+}

@@ -1,0 +1,289 @@
+.columnLayout {
+    height: calc(var(--hundred-vh) - var(--header-height));
+}
+
+@media (min-width: 769px) {
+    .columnLayout {
+        height: calc(var(--hundred-vh) - var(--header-height-large));
+    }
+}
+
+.columnLayoutContent {
+    min-height: 100%;
+}
+
+.centeredContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.copy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenShotText {
+    color: #000000;
+    font-family: "Noto Sans";
+    font-size: var(--font-size-base-18);
+    line-height: var(--font-size-base-28);
+    composes: multilang-support from global;
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .copy {
+        align-items: center;
+    }
+    .pollPassText {
+        font-size: var(--font-size-base-20);
+    }
+}
+
+.bodyCopy {
+    font-size: var(--font-size-base-18);
+    line-height: var(--font-size-base-28);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .bodyCopy {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-32);
+    }
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.options>div {
+    margin: 0 16px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .options {
+        justify-content: center;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .options {
+        align-items: center;
+    }
+}
+
+.option {
+    composes: fwhite from global;
+    align-items: center;
+    border: 1px solid var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 210px;
+    padding: 16px;
+    width: 160px;
+}
+
+.option .buttonContainer button {
+    min-height: 64px;
+    min-width: 129px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .option {
+        margin: 0 12px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .option {
+        height: 338px;
+        width: 338px;
+    }
+    .option svg {
+        flex-grow: 1;
+        margin-bottom: auto;
+    }
+    .option .buttonContainer {
+        flex-grow: 0;
+        margin-top: auto;
+    }
+    .option .buttonContainer button {
+        min-width: 291px;
+    }
+}
+
+.option svg {
+    margin: auto;
+    width: 87px;
+    height: 87px;
+}
+
+.printButton path,
+.downloadButton path {
+    fill: var(--black);
+}
+
+.info {
+    filter: invert(var(--icon-invert));
+}
+
+.footerBodyCopy {
+    margin: auto 1%;
+}
+
+.status {
+    height: 24px;
+    font-size: var(--font-small);
+}
+
+.status svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.continueButton {
+    margin-left: auto;
+    min-width: 140px;
+    min-height: 44px;
+}
+
+.continueNavButton {
+    width: 229px;
+    height: 64px;
+}
+
+@media(min-width: 768px) {
+    .printDownloadOrScreenshotButton {
+        composes: multilang-support from global;
+    }
+    .continueButton {
+        min-width: 160px;
+    }
+}
+
+.buttonContainer {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: 100%;
+}
+
+.qrCodeLarge {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.codeContainer {
+    padding: 20px;
+    width: 260px;
+    border: 1px solid var(--gray);
+    margin-bottom: 24px;
+    background-color: white;
+}
+
+.titleCopy {
+    font-family: "Noto Sans";
+    font-weight: 300;
+    font-size: var(--font-size-base-28);
+}
+
+.pollPassText {
+    font-size: var(--font-size-base-18);
+}
+
+@media (max-width: px) {
+    .option svg {
+        width: 100%;
+    }
+    .printDownloadOrScreenshotButton {
+        width: 100%;
+    }
+    .titleCopy {
+        font-size: 32px;
+        font-family: "Noto Sans";
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 375px) {
+    .option svg {
+        width: 100%;
+    }
+    .printDownloadOrScreenshotButton {
+        width: 100%;
+    }
+    .titleCopy {
+        font-size: 28px;
+        font-family: "Noto Sans";
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 769px) {
+    .option {
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 1001px) {
+    .options {
+        width: 65%;
+    }
+    .option {
+        max-width: none;
+    }
+}
+
+.modalBodyCopy {
+    composes: fs-bodyCopyLarge from global;
+}
+
+.continueModalButton {
+    margin-left: 20px;
+    min-width: 200px;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .continueModalButton {
+        margin-left: 100px;
+        min-width: 235px;
+    }
+    .titleCopy {
+        font-size: var(--font-size-base-32);
+    }
+}
+
+@media (min-width: 1200px) {
+    .screenshotButton {
+        display: none !important;
+    }
+    .continueButton {
+        min-width: 155px;
+        min-height: 64px;
+    }
+}

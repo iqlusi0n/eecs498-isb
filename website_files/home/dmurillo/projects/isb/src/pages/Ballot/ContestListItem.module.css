@@ -1,0 +1,47 @@
+.contestListItem {
+    composes: fwhite from global;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    min-width: 100%;
+    /* to override default text-align and border for buttons */
+    text-align: inherit;
+    border: none;
+    border-top: 1px solid var(--lgray);
+    border-bottom: 1px solid var(--lgray);
+    padding: 7px;
+}
+
+.selected {
+    background-color: var(--mgray);
+}
+
+:global(.allowHover) .contestListItem:hover {
+    background-color: var(--mgray);
+}
+
+.icon {
+    height: 32px;
+    margin: 0 20px;
+    width: 32px;
+    flex: 0 0 auto;
+    filter: invert(var(--icon-invert));
+}
+
+.contestProgress {
+    composes: fs-small cblue from global;
+    composes: multilang-support from global;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.copy {
+    flex: 1 1 auto;
+}
+
+.contestName {
+    font-weight: bold;
+    margin-bottom: 0;
+}

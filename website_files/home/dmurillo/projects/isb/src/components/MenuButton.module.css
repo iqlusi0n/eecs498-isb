@@ -1,0 +1,38 @@
+.menuButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    min-height: 35px;
+    border-bottom: 1px solid var(--gray);
+    width: 100%;
+    background-color: transparent;
+}
+
+.labelCopy {
+    flex: 1 1 auto;
+    font-size: var(--font-size-base-18);
+}
+
+.menuButton svg {
+    height: 16px;
+    width: 9px;
+    margin: 0 20px 0 10px;
+}
+
+.up svg {
+    transform: rotate(-90deg);
+}
+
+.right svg {
+    transform: rotate(0deg);
+}
+
+.down svg {
+    transform: rotate(90deg);
+}
+
+.menuButton path {
+    fill: var(--black);
+}

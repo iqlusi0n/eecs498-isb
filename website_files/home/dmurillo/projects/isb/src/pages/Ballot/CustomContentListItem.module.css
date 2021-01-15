@@ -1,0 +1,36 @@
+.contentListItem {
+    composes: fwhite from global;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    min-width: 100%;
+    /* to override default text-align and border for buttons */
+    text-align: inherit;
+    border: none;
+    border-top: 1px solid var(--lgray);
+    border-bottom: 1px solid var(--lgray);
+    padding: 7px;
+    border-left: 5px solid transparent;
+}
+
+.selected {
+    background-color: var(--mgray);
+    border-left: 5px solid var(--black);
+}
+
+:global(.allowHover) .contentListItem:hover {
+    background-color: var(--mgray);
+    border-left: 5px solid var(--black);
+}
+
+.copy {
+    margin-left: 24px;
+    flex: 1 1 auto;
+}
+
+.header {
+    font-weight: bold;
+    margin-bottom: 0;
+}

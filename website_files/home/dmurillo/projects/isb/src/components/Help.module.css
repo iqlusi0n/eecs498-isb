@@ -1,0 +1,241 @@
+/*******************************************************************************
+ *
+ * NAV BAR
+ *
+ ******************************************************************************/
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 300px; */
+    border-bottom: 1px solid var(--gray);
+    padding: 0;
+}
+
+.helpTop {
+    composes: flex-row-spaced from global;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--gray);
+    width: 100%;
+}
+
+.title {
+    composes: fs-large cblack from global;
+    margin: 14px 0 14px 30px;
+}
+
+.desktopTitle {
+    composes: fs-large cblack from global;
+}
+
+.navItem {
+    min-height: 100%;
+    width: 90%;
+}
+
+.navItem a {
+    border-bottom: 1px solid var(--mgray);
+}
+
+.navItem:last-child a,
+.navItem a.mobileSelected {
+    border-bottom: none;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .navItem a,
+    .navItem:last-child a {
+        border-bottom: 8px solid transparent;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .navItem a.tabletDesktopSelected {
+        border-bottom: 8px solid var(--yellow);
+    }
+}
+
+.navItemLink {
+    composes: flex-row-spaced cblack from global;
+    padding: 16px 0;
+    min-height: 100%;
+    text-decoration: none;
+}
+
+.navItemLink img {
+    margin-left: 8px;
+}
+
+.returnButton {
+    composes: fwhite from global;
+    composes: cblue from global;
+    composes: fs-small from global;
+    font-weight: bold;
+    text-decoration: underline;
+    padding-bottom: 0;
+    margin-right: 14px;
+    margin-bottom: 14px;
+    border: none;
+}
+
+:global(.allowHover) .returnButton:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.text {
+    font-size: var(--font-size-base-18);
+    font-weight: normal;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .text {
+        font-size: var(--font-size-base-18);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .text {
+        font-size: var(--font-size-base-20);
+    }
+}
+
+@media (min-width: 376px) {
+    .nav {
+        padding-left: 60px;
+        padding-right: 54px;
+        flex-direction: row;
+        height: 80px;
+    }
+    .navItem {
+        width: auto;
+    }
+    .navItemLink {
+        justify-content: center;
+    }
+    .tabletDesktopSelected.navItemLink {
+        border-bottom: 8px solid var(--yellow);
+    }
+    :global(.allowHover) .navItemLink:hover {
+        border-bottom: 8px solid var(--yellow);
+    }
+}
+
+/*******************************************************************************
+ *
+ * HELP CONTENT
+ *
+ ******************************************************************************/
+
+.content {
+    padding: 12px 30px 12px 30px;
+    max-height: 400px;
+    overflow: auto;
+}
+
+@media (min-width: 376px) {
+    .content {
+        padding: 28px 60px 30px 60px;
+    }
+}
+
+div.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+span.menuLabel {
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+.returnButton {
+    composes: fwhite from global;
+    composes: cblue from global;
+    composes: fs-small from global;
+    composes: multilang-support from global;
+    padding-bottom: 0;
+    margin-right: 14px;
+    border: none;
+    font-weight: normal;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.returnButton svg {
+    height: 15px;
+    width: 8px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+}
+
+.returnButton path {
+    fill: var(--blue);
+}
+
+:global(.allowHover) .returnButton:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+:global(.allowHover) .returnButton:hover path {
+    fill: var(--black);
+}
+
+.titleButton {
+    border-bottom: 5px solid transparent;
+    font-size: var(--font-size-base-14);
+    background: transparent;
+}
+
+:global(.allowHover) .titleButton:hover,
+.selectedStyle {
+    border-bottom: 5px solid var(--yellow);
+}
+
+div.titleButtonCopy {
+    margin-bottom: 0;
+}
+
+/*******************************************************************************
+ *
+ * HELP CONTENT
+ *
+ ******************************************************************************/
+
+.footer {
+    composes: footer from global;
+    border-top: 1px solid var(--gray);
+}
+
+@media (min-width: 376px) {
+    .footer {
+        background-color: var(--white);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 90px;
+        position: relative;
+        box-shadow: none;
+    }
+}
+
+/* TODO: Remove this. Slightly smaller font needed in mobile for the very long title here */
+
+@media (max-width: 375px) {
+    .smallerFont {
+        font-size: 22px
+    }
+}

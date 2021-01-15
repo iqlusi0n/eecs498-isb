@@ -1,0 +1,131 @@
+.footerContent {
+    justify-content: space-between;
+}
+
+.progress {
+    composes: flex-column-centered from global;
+    composes: multilang-support from global;
+    margin: auto;
+    text-align: center;
+}
+
+.ballotProgress {
+    font-size: var('--font-size-base-10');
+    line-height: var('--font-size-base-10');
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .ballotProgress {
+        composes: fs-small bold cblack from global;
+    }
+}
+
+.contestProgress {
+    composes: fs-small bold cblack from global;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 0;
+    min-width: 97px;
+    min-height: 44px;
+}
+
+@media (max-width: 374px) {
+    .nav {
+        max-width: 105px;
+        padding: 5px 6px;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .nav {
+        min-width: 160px;
+    }
+    .nav span {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .nav {
+        min-height: 64px;
+        min-width: 155px;
+    }
+    .nav span {
+        text-align: left;
+    }
+    .nav.back span {
+        text-align: right;
+    }
+}
+
+.hideBack {
+    visibility: hidden;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .navContainer {
+        width: 782px;
+    }
+}
+
+@media (min-width: 376px) {
+    .navButton {
+        width: 160px;
+    }
+    .navContainer {
+        /* margin-right: 5%; */
+    }
+    .reviewButton {
+        /* margin-left: 5%; */
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .reviewButton {
+        height: 64px;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav {
+        margin-left: 28px;
+    }
+    .navButton {
+        width: 155px;
+        height: 64px;
+    }
+}
+
+.selections {
+    font-family: "Noto Sans Bold";
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .nav {
+        margin-left: 0;
+    }
+}

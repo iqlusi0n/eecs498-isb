@@ -1,0 +1,56 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 0 0 100%;
+}
+
+.pollPassText {
+    font-size: var(--font-size-base-18);
+}
+
+.generatePollPass {
+    min-width: 200px;
+    min-height: 44px;
+    margin: 0 0 0 auto;
+}
+
+@media(max-width: 1199px) {
+    .generatePollPass {
+        padding: 10px;
+    }
+}
+
+@media(min-width: 768px) {
+    .pollPassText {
+        font-size: var(--font-size-base-14);
+    }
+    .generatePollPass {
+        min-width: 190px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .pollPassDesktopText {
+        font-size: var(--font-size-base-20);
+    }
+    .generatePollPass {
+        min-width: 243px;
+        height: 64px;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .column:first-child {
+        flex: 0 0 40%;
+        margin: 0 10% 0 0;
+    }
+    .column:last-child {
+        flex: 0 0 50%;
+    }
+}

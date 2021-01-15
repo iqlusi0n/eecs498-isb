@@ -1,0 +1,174 @@
+.navButton {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size-base-16);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    text-align: left;
+    min-height: 48px;
+    border: 1px solid var(--yellow);
+    box-shadow: 0 0 0 1px var(--yellow);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .navButton {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/* large devices (desktop, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .navButton {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: left;
+}
+
+.labelCopy {
+    flex: 1 1 auto;
+}
+
+.iconTopMobile {
+    flex-direction: column;
+}
+
+.icon svg {
+    margin: 0 10px 0 0;
+    flex: 0 0 auto;
+    height: 24px;
+    width: 24px;
+}
+
+.iconTopMobile svg {
+    flex: 0 0 auto;
+    height: 24px;
+    width: 24px;
+}
+
+.up svg,
+.left svg {
+    margin-right: 12px;
+}
+
+.up svg {
+    transform: rotate(-90deg);
+}
+
+.upRight svg {
+    transform: rotate(-90deg);
+}
+
+.left svg {
+    transform: rotate(180deg);
+    margin-right: 12px;
+    height: 16px;
+    width: 9px;
+}
+
+.right svg {
+    transform: rotate(0deg);
+    margin-left: 12px;
+    height: 16px;
+    width: 9px;
+}
+
+.down svg {
+    transform: rotate(90deg);
+}
+
+.white {
+    background-color: var(--white);
+}
+
+.yellow {
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    box-shadow: 0 0 0 1px var(--yellow);
+}
+
+.gray {
+    background-color: var(--gray);
+    border: 2px solid var(--gray);
+}
+
+.transparent {
+    background-color: transparent;
+    border: 2px solid var(--gray);
+}
+
+.black {
+    background-color: var(--black);
+    border: 2px solid var(--black);
+}
+
+.secondary {
+    background: var(--white);
+    border: 1px solid var(--blue);
+    box-shadow: 0 0 0 1px var(--blue);
+}
+
+.secondary span {
+    color: var(--blue);
+}
+
+.secondary path {
+    color: var(--blue);
+}
+
+.navButton path {
+    fill: var(--black);
+}
+
+.navButton.black path {
+    fill: var(--white);
+}
+
+:global(.allowHover) .navButton:hover,
+:global(.allowHover) .white:hover,
+:global(.allowHover) .yellow:hover {
+    border: 1px solid var(--white);
+    box-shadow: 0 0 0 1px var(--black);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+:global(.allowHover) .navButton:hover span,
+:global(.allowHover) .white:hover span,
+:global(.allowHover) .yellow:hover span {
+    color: var(--white);
+}
+
+:global(.allowHover) .navButton:hover path,
+:global(.allowHover) .white:hover path,
+:global(.allowHover) .yellow:hover path {
+    fill: var(--white);
+}
+
+:global(.allowHover) .secondary:hover {
+    box-shadow: 0 0 0 1px var(--blue);
+    background-color: var(--blue);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .iconTopMobile {
+        flex-direction: row;
+    }
+    .iconTopMobile svg {
+        margin-right: 7px;
+    }
+}

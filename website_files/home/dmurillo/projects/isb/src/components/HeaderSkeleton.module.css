@@ -1,0 +1,17 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    background-color: var(--white);
+    height: var(--header-height);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    composes: content-flip from global;
+}
+
+@media (min-width: 1200px) {
+    .header {
+        height: var(--header-height-large);
+    }
+}

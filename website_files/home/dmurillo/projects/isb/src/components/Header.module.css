@@ -1,0 +1,230 @@
+.header {
+    z-index: 100;
+    width: 100vw;
+    background-color: var(--white);
+    height: var(--header-height);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    composes: content-flip from global;
+}
+
+@media (min-width: 1200px) {
+    .header {
+        height: var(--header-height-large);
+    }
+}
+
+.content {
+    composes: content from global;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    height: 100%;
+    min-height: 100%;
+    padding: 5px 6px;
+}
+
+@media (min-width: 375px) {
+    .content {
+        padding: 5px 24px;
+    }
+    .adjustHeaderForBallot {
+        padding: 5px 6px;
+    }
+    .adjustHeaderForBallot .right {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .adjustHeaderForBallot {
+        padding: 5px 24px;
+    }
+    .adjustHeaderForBallot .right {
+        width: auto;
+        justify-content: space-around;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .content {
+        padding: 7px 24px;
+        /* margin-top: 10.5px; */
+        width: 1200px;
+    }
+}
+
+.pushContentDown {
+    position: relative;
+    width: 100%;
+    height: var(--header-height-large);
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.left a,
+.left .title {
+    flex-grow: 0;
+}
+
+.right {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.adjustHeaderForBallot .right {
+    justify-content: space-between;
+}
+
+@media (min-width: 375px) {
+    .right {
+        width: auto;
+    }
+}
+
+@media (min-width: 520px) {
+    .right {
+        justify-content: flex-end;
+        margin-left: auto;
+        width: auto;
+    }
+    .adjustHeaderForBallot .right {
+        justify-content: flex-end;
+    }
+}
+
+.header .navButton {
+    flex: 0 0 auto;
+    height: 54px;
+    width: var(--iphone5-header-default-button-width);
+    margin-right: var(--iphone5-header-default-button-right);
+    padding: 4px 10px;
+}
+
+.header .adjustHeaderForBallot .navButton {
+    width: var(--iphone5-header-review-button-width);
+    margin-right: var(--iphone5-header-review-button-right);
+}
+
+/* Extra small devices (new phones, 375px and up) */
+
+@media(min-width: 375px) {
+    .header .navButton {
+        width: 80px;
+        margin-right: 14px;
+    }
+    .header .adjustHeaderForBallot .navButton {
+        width: 80px;
+        margin-right: 14px;
+    }
+}
+
+.header .navButton:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 520px) {
+    .header .navButton {
+        flex: 0 0 auto;
+        margin-right: 12px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header .navButton,
+    .header .adjustHeaderForBallot .navButton {
+        flex: 0 0 auto;
+        height: 48px;
+        margin-right: 14px;
+        padding-left: 11px;
+        padding-right: 11px;
+        width: auto;
+    }
+}
+
+.header .navButton span {
+    font-size: var(--font-size-base-12);
+}
+
+@media (min-width: 375px) {
+    .header .navButton span {
+        font-size: var(--font-size-base-14);
+    }
+}
+
+.crestLink {
+    height: 50px;
+    width: 50px;
+    margin-right: 14px;
+    margin-left: var(--iphone5-header-crest-left);
+}
+
+@media (min-width: 375px) {
+    .crestLink {
+        margin-left: 0;
+    }
+}
+
+.crest {
+    height: 50px;
+    width: 50px;
+    composes: multilang-support from global;
+}
+
+@media (min-width: 520px) {
+    .crest {
+        margin-right: 14px;
+    }
+}
+
+/*including div to be able to override the class from BodyCopy element */
+
+div.title {
+    font-size: var(--font-size-base-16);
+    font-family: "Noto Sans Bold";
+    margin-bottom: 0;
+}
+
+@media (min-width: 769px) {
+    .crest {
+        /* height: 56px; */
+    }
+}
+
+.siteName {
+    font-size: var(--font-size-base-16);
+    line-height: var(--font-size-base-16);
+    margin-bottom: 0 !important;
+    /* margin-left: var(--font-size-base-36); */
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (max-width: 767px) {
+    .adjustHeaderForBallot .siteName {
+        display: none;
+    }
+}
+
+@media (max-width: 519px) {
+    .hideMobileHeaderSpecial {
+        display: none !important;
+    }
+}

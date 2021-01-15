@@ -1,0 +1,45 @@
+.headerButton {
+    background-color: inherit;
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+    font-size: var(--font-small);
+    margin-bottom: 10px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.headerButton svg {
+    flex-shrink: 0;
+}
+
+.headerButton .down {
+    transform: rotate(90deg);
+    padding-right: 0;
+}
+
+.headerButton path {
+    fill: var(--black);
+}
+
+.headerButton .headerCopy {
+    color: var(--black);
+    padding-left: 20px;
+    text-align: left;
+}
+
+.headerCopy {
+    composes: inline-multilang-support from global;
+}
+
+.body {
+    padding-left: 30px;
+}
+
+@media (min-width: 376px) {
+    .body {
+        padding-left: 0;
+    }
+}

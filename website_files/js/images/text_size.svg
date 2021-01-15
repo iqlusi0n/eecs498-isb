@@ -1,0 +1,43 @@
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+import React from 'react';
+
+var _ref =
+/*#__PURE__*/
+React.createElement("g", {
+  id: "SETTINGS",
+  stroke: "none",
+  strokeWidth: 1,
+  fill: "none",
+  fillRule: "evenodd"
+}, React.createElement("g", {
+  id: "Settings",
+  transform: "translate(-574.000000, -327.000000)",
+  fill: "#000000",
+  fillRule: "nonzero"
+}, React.createElement("g", {
+  id: "Group-3",
+  transform: "translate(515.000000, 300.000000)"
+}, React.createElement("g", {
+  id: "Group"
+}, React.createElement("g", {
+  id: "baseline-format_size-24px",
+  transform: "translate(48.000000, 13.000000)"
+}, React.createElement("path", {
+  d: "M32.1578947,14 L32.1578947,24.6 L49.7894737,24.6 L49.7894737,67 L60.3684211,67 L60.3684211,24.6 L78,24.6 L78,14 L32.1578947,14 Z M11,42.2666667 L21.5789474,42.2666667 L21.5789474,67 L32.1578947,67 L32.1578947,42.2666667 L42.7368421,42.2666667 L42.7368421,31.6666667 L11,31.6666667 L11,42.2666667 Z",
+  id: "Shape"
+}))))));
+
+var SvgComponent = function SvgComponent(props) {
+  return React.createElement("svg", _extends({
+    focusable: "false",
+    width: "67px",
+    height: "53px",
+    viewBox: "0 0 67 53",
+    version: 1.1,
+    xmlnsXlink: "http://www.w3.org/1999/xlink"
+  }, props), _ref);
+};
+
+export default __webpack_public_path__ + "static/media/text_size.e1fb8e8e.svg";
+export { SvgComponent as ReactComponent };

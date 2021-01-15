@@ -1,0 +1,730 @@
+html {
+    font-size: var(--font-size-base);
+}
+
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--lgray);
+    font-family: "Noto Sans", Helvetica, Arial, sans-serif;
+    font-size: var(--font-size-base-14);
+}
+
+strong {
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+p {
+    line-height: 30px;
+    margin: 0;
+}
+
+#root {
+    display: grid;
+    /* IE required prefixes which autoprefixer removes 
+  so must be completely off instead of just ignored */
+    /* autoprefixer: off */
+    display: -ms-grid;
+    -ms-grid-rows: auto 1fr auto;
+    /* autoprefixer: on */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 'header' 'content' 'footer';
+    height: 100%;
+    width: 100vw;
+    position: relative;
+    z-index: 0;
+}
+
+b {
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+}
+
+a {
+    color: #20499F;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local("Lato-Bold"), url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: local("OpenSans-Regular"), url("./fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local("NotoSans-Regular"), url("./fonts/Noto_Sans/noto-sans-v9-latin-regular.woff") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Backup for legacy bold text */
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: local("NotoSans-Bold"), url("./fonts/Noto_Sans/noto-sans-v9-latin-700.woff") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans Light';
+    src: local("NotoSans-Light"), url("./fonts/Noto_Sans/NotoSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Noto Sans Bold';
+    src: local("NotoSans-Bold"), url("./fonts/Noto_Sans/noto-sans-v9-latin-700.woff") format("truetype");
+}
+
+/*******************************************************************************
+ *
+ * HIGH-LEVEL CONTENT SPACING
+ *
+ ******************************************************************************/
+
+:global(.content) {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+}
+
+:global(.grid-content) {
+    overflow-y: auto;
+    width: 100vw;
+    grid-row: 2;
+    /* autoprefixer: ignore next */
+    -ms-grid-row: 2;
+}
+
+/**
+  NEW WAY:
+  mobile view: 0px - 767px
+  tablet view: 768px - 1199px
+  desktop view: 1200px+ (content max-width: 1440px)
+ */
+
+@media (max-width: 767px) {
+    :global(.hiddenMobile) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    :global(.hiddenMobileTablet) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    :global(.hiddenTabletDesktop) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    :global(.hiddenTablet) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    :global(.hiddenDesktop) {
+        display: none !important;
+    }
+}
+
+/**
+  OLD WAY - BUT STILL USED IN SOME CSS FOR NOW:
+  mobile view: 0 - 375px
+  tablet view: 376 - 768px
+  desktop view: 769px+ (content max-width: 1440px)
+ */
+
+@media (max-width: 375px) {
+    :global(.hideMobile) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    :global(.hideMobileTablet) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 376px) {
+    :global(.hideTabletDesktop) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    :global(.hideTablet) {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    :global(.hideDesktop) {
+        display: none !important;
+    }
+}
+
+:global(.page) {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: var(--lgray);
+}
+
+:global(.column-page) {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: var(--lgray);
+}
+
+:global(.centered-content-column) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+:global(.centered-content) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+:global(.spaced-content) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+:global(.right-content) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+:global(.left-content) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+:global(.flex-row-centered) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.flex-row-spaced) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:global(.flex-column-centered) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(.flex-column-spaced) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+:focus {
+    outline: rgb(77, 144, 254) auto 1px;
+}
+
+/*******************************************************************************
+ *
+ * FIXED FOOTER
+ *
+ ******************************************************************************/
+
+:global(.footer) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    background-color: var(--white);
+    height: var(--footer-height);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 12px;
+    z-index: 99;
+    width: 100vw;
+    max-width: 100%;
+    /* autoprefixer: ignore next */
+    -ms-grid-row: 3;
+}
+
+@media (min-width: 768px) {
+    :global(.footer) {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    :global(.footer) {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        background-color: var(--white);
+        height: var(--footer-height-large);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        padding: 0 24px;
+        z-index: 99;
+    }
+}
+
+/*******************************************************************************
+ *
+ * FONT SIZE
+ *
+ ******************************************************************************/
+
+:global(.fs-bodyCopy) {
+    font-size: var(--font-size-base-14);
+    line-height: var(--font-size-base-24);
+}
+
+:global(.fs-bodyCopyLarge) {
+    font-size: var(--font-size-base-14);
+    line-height: var(--font-size-base-24);
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    :global(.fs-bodyCopyLarge) {
+        font-size: var(--font-size-base-18);
+        line-height: var(--font-size-base-28);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    :global(.fs-bodyCopyLarge) {
+        font-size: var(--font-size-base-20);
+        line-height: var(--font-size-base-32);
+    }
+}
+
+:global(.fs-small) {
+    font-size: var(--font-size-base-14);
+}
+
+:global(.fs-medium) {
+    font-size: var(--font-medium);
+}
+
+:global(.fs-large) {
+    font-size: var(--font-size-base-32);
+}
+
+:global(.fs-xlarge) {
+    font-size: var(--font-xlarge);
+}
+
+:global(.fs-xxlarge) {
+    font-size: var(--font-xxlarge);
+}
+
+@media (max-width: 768px) {
+    :global(.fs-xxlarge) {
+        font-size: var(--font-xlarge);
+    }
+}
+
+/*******************************************************************************
+ *
+ * BACKGROUND (FILL) COLOR
+ *
+ ******************************************************************************/
+
+:global(.fwhite) {
+    background-color: var(--white);
+}
+
+:global(.fblack) {
+    background-color: var(--black);
+}
+
+:global(.fblue) {
+    background-color: var(--blue);
+}
+
+:global(.flblue) {
+    background-color: var(--lblue);
+}
+
+:global(.fyellow) {
+    background-color: var(--yellow);
+}
+
+:global(.flgray) {
+    background-color: var(--lgray);
+}
+
+:global(.fgray) {
+    background-color: var(--gray);
+}
+
+:global(.fmgray) {
+    background-color: var(--mgray);
+}
+
+:global(.fdgray) {
+    background-color: var(--dgray);
+}
+
+/*******************************************************************************
+ *
+ * TEXT
+ *
+ ******************************************************************************/
+
+:global(.cwhite) {
+    color: var(--white);
+}
+
+:global(.cblack) {
+    color: var(--black);
+}
+
+:global(.cblue) {
+    color: var(--blue);
+}
+
+:global(.clblue) {
+    color: var(--lblue);
+}
+
+:global(.cyellow) {
+    color: var(--yellow);
+}
+
+:global(.clgray) {
+    color: var(--lgray);
+}
+
+:global(.cgray) {
+    color: var(--gray);
+}
+
+:global(.cdgray) {
+    color: var(--dgray);
+}
+
+:global(.bold) {
+    font-family: "Noto Sans Bold";
+}
+
+/*******************************************************************************
+ *
+ * BORDERS
+ *
+ ******************************************************************************/
+
+:global(.b1white) {
+    border: 1px solid var(--white);
+}
+
+:global(.b1black) {
+    border: 1px solid var(--black);
+}
+
+:global(.b1blue) {
+    border: 1px solid var(--blue);
+}
+
+:global(.b1lblue) {
+    border: 1px solid var(--lblue);
+}
+
+:global(.b1yellow) {
+    border: 1px solid var(--yellow);
+}
+
+:global(.b1lgray) {
+    border: 1px solid var(--lgray);
+}
+
+:global(.b1gray) {
+    border: 1px solid var(--gray);
+}
+
+:global(.b1dgray) {
+    border: 1px solid var(--dgray);
+}
+
+:global(.b2white) {
+    border: 2px solid var(--white);
+}
+
+:global(.b2black) {
+    border: 2px solid var(--black);
+}
+
+:global(.b2blue) {
+    border: 2px solid var(--blue);
+}
+
+:global(.b2lblue) {
+    border: 2px solid var(--lblue);
+}
+
+:global(.b2yellow) {
+    border: 2px solid var(--yellow);
+}
+
+:global(.b2lgray) {
+    border: 2px solid var(--lgray);
+}
+
+:global(.b2gray) {
+    border: 2px solid var(--gray);
+}
+
+:global(.b4white) {
+    border: 4px solid var(--white);
+}
+
+:global(.b4black) {
+    border: 4px solid var(--black);
+}
+
+:global(.b4blue) {
+    border: 4px solid var(--blue);
+}
+
+:global(.b4lblue) {
+    border: 4px solid var(--lblue);
+}
+
+:global(.b4yellow) {
+    border: 4px solid var(--yellow);
+}
+
+:global(.b4lgray) {
+    border: 4px solid var(--lgray);
+}
+
+:global(.b4gray) {
+    border: 4px solid var(--gray);
+}
+
+:global(.b4dgray) {
+    border: 4px solid var(--dgray);
+}
+
+/*******************************************************************************
+ *
+ * BUTTONS
+ *
+ ******************************************************************************/
+
+:global(.yellow-centered-button) {
+    background-color: var(--yellow);
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+    font-size: var(--font-size-base-14);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--black);
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    box-shadow: 0 0 0 1px var(--yellow);
+}
+
+:global(.allowHover) :global(.yellow-centered-button:hover) {
+    border: 1px solid var(--white);
+    box-shadow: 0 0 0 1px var(--black);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+:global(.allowHover) :global(.yellow-centered-button:hover) span {
+    color: var(--white);
+}
+
+:global(.allowHover) :global(.yellow-centered-button:hover) path {
+    fill: var(--white);
+}
+
+:global(.yellow-next-button) {
+    background-color: var(--yellow);
+    height: 64px;
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-small);
+    justify-content: space-between;
+    padding-left: 24px;
+    padding-right: 14px;
+    color: var(--black);
+    align-items: center;
+    cursor: pointer;
+}
+
+:global(.yellow-back-button) {
+    background-color: var(--yellow);
+    height: 64px;
+    font-family: "Noto Sans Bold";
+    font-weight: normal;
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-small);
+    justify-content: left;
+    padding-left: 14px;
+    color: var(--black);
+    align-items: center;
+    cursor: pointer;
+}
+
+:global(.next-chevron) {
+    filter: invert(var(--chevron-invert));
+    transform: rotate(270deg);
+}
+
+:global(.back-chevron) {
+    filter: invert(var(--chevron-invert));
+    transform: rotate(90deg);
+}
+
+:global(.up-chevron) {
+    filter: invert(var(--chevron-invert));
+    transform: rotate(180deg);
+}
+
+:global(.down-chevron) {
+    filter: invert(var(--chevron-invert));
+}
+
+/* For Farsi language support - used on containers and text input fields. Flips (mirrors) everything */
+
+:global(.content-flip) {
+    transform: var(--scale-x);
+    -ms-transform: var(--scale-x);
+}
+
+/* For Farsi and Korean language support - used on text fields and select fields: */
+
+:global(.multilang-support) {
+    transform: var(--scale-x);
+    -ms-transform: var(--scale-x);
+    direction: var(--text-direction);
+    word-break: var(--word-break);
+}
+
+/* For Farsi and Korean language support
+ transform doesn't work on inline elements so have to change them to inline block */
+
+:global(.inline-multilang-support) {
+    transform: var(--scale-x);
+    -ms-transform: var(--scale-x);
+    direction: var(--text-direction);
+    word-break: var(--word-break);
+    display: inline-block;
+    text-align: var(--text-align);
+}
+
+/* Global Modal Overrides */
+
+.modal-title .modal-title-override {
+    margin-bottom: 0;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .modal-title .modal-title-override {
+        font-size: var(--font-size-base-24);
+        line-height: var(--font-size-base-32);
+    }
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .modal-title .modal-title-override {
+        font-size: var(--font-size-base-40);
+        line-height: var(--font-size-base-48);
+    }
+}
+
+#helpModal :global(.overrideModalContentBackground) {
+    background-color: var(--white);
+}
+
+#statementModal :global(.overrideModalContentBackground) {
+    background-color: var(--white);
+}

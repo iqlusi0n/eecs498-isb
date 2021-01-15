@@ -1,0 +1,90 @@
+.valediction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0;
+    width: 100%;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+}
+
+.left div,
+.left p {
+    margin-bottom: 21px;
+}
+
+.right {
+    flex: 0.4;
+}
+
+.navButton {
+    width: 190px;
+    min-height: 44px;
+}
+
+@media(min-width: 375px) {
+    .right {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+.findYourContainer {
+    margin-left: auto;
+}
+
+.valedictionText1,
+.valedictionText2,
+.desktopText,
+.mobileTabletText {
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    .valedictionText1,
+    .valedictionText2,
+    .desktopText,
+    .mobileTabletText {
+        font-size: 14px;
+    }
+    .valediction {
+        flex-direction: row;
+        margin-top: 66px;
+    }
+    .navButton {
+        width: 160px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .valedictionText1,
+    .valedictionText2,
+    .desktopText,
+    .mobileTabletText {
+        font-size: 18px;
+    }
+    .navButton {
+        width: 243px;
+        height: 64px;
+    }
+}
+
+.returnByLabel {
+    font-family: "Noto Sans Bold";
+}
+
+div.returnByBody {
+    margin: 28px 0 0 0;
+}
+
+.returnByBody div {
+    margin-bottom: 0px;
+}
+
+div.lastSection {
+    margin-bottom: 60px;
+}

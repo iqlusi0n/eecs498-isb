@@ -1,0 +1,23 @@
+.container {
+    --spinnerSize: 24px;
+    --spinnerThickness: 3px;
+    display: inline-block;
+    width: var(--spinnerSize);
+    height: var(--spinnerSize);
+    margin: var(--spinnerMargin);
+}
+
+.spinner {
+    width: var(--spinnerSize);
+    height: var(--spinnerSize);
+    animation: spinner 1.2s linear infinite;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

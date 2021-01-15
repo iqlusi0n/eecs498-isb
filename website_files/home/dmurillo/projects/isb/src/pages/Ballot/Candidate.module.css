@@ -1,0 +1,178 @@
+/*******************************************************************************
+ *
+ * CANDIDATES
+ *
+ ******************************************************************************/
+
+.candidate {
+    border: 4px solid var(--black);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /*height: var(--candidate-height);*/
+    margin-bottom: 20px;
+}
+
+.writeIn {
+    composes: fs-large from global;
+    border: 4px dashed var(--black) !important;
+}
+
+.writeIn .candidateInfo {
+    border-left: 4px dashed var(--black);
+}
+
+.candidateBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    /* to override default background-color for buttons */
+    background-color: transparent;
+    text-align: left;
+}
+
+.candidateBoxFA {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    /* to override default background-color for buttons */
+    background-color: transparent;
+    text-align: right;
+}
+
+@media (max-width: 374px) {
+    .candidateBox {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+:global(.allowHover) .candidateBox:hover {
+    color: var(--black);
+    background-color: var(--yellow);
+    text-decoration: underline;
+}
+
+.check {
+    width: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.check path {
+    fill: var(--black);
+}
+
+.white path {
+    fill: var(--white);
+}
+
+.name {
+    margin-bottom: 0.25em;
+    font-size: var(--font-size-base-20);
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.infoLabel {
+    composes: inline-multilang-support from global;
+    color: var(--black);
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .name {
+        font-weight: normal;
+    }
+}
+
+.job {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Medium devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    .job {
+        font-weight: normal;
+    }
+}
+
+.candidateInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-left: 4px solid var(--black);
+    width: 66px;
+    /* to override default background-color for buttons */
+    background-color: transparent;
+}
+
+:global(.allowHover) .candidateInfo:hover {
+    background-color: var(--yellow);
+    text-decoration: underline;
+}
+
+.candidateInfo svg {
+    width: 33.33px;
+}
+
+.candidateInfo path {
+    fill: var(--black);
+}
+
+/* including hover styles to override candidateBox:hover styles above */
+
+.selected,
+.selected * {
+    color: var(--white);
+    background-color: var(--black);
+    text-decoration: none;
+}
+
+:global(.allowHover) .selected:hover,
+:global(.allowHover) .selected:hover * {
+    color: var(--white);
+    background-color: var(--black);
+    text-decoration: none;
+}
+
+/* We only want hover styles for selected candidates after mouseout from the initial selection.
+  Hence only adding them when the JS adds the selectedHover class */
+
+.selected.selectedHover,
+.selected.selectedHover * {
+    color: var(--black);
+    background-color: var(--yellow);
+    text-decoration: underline;
+}
+
+@media (min-width: 376px) {
+    .candidateInfo {
+        width: 63.5px;
+    }
+    .check {
+        /* width: 76px; */
+    }
+}
+
+@media (min-width: 769px) {
+    .candidateInfo {
+        width: 140px;
+    }
+    .check {
+        /* width: 96px; */
+    }
+}

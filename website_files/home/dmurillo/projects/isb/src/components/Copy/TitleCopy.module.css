@@ -1,0 +1,38 @@
+.title {
+    font-family: 'Noto Sans Light', Helvetica, Arial, sans-serif;
+    font-size: var(--font-size-base-24);
+    line-height: var(--font-size-base-36);
+    color: var(--black);
+    margin-bottom: var(--font-size-base-22);
+    composes: multilang-support from global;
+}
+
+/* Small devices (tablets, 768px and up)*/
+
+@media (min-width: 768px) {
+    .title {
+        font-size: var(--font-size-base-32);
+        line-height: var(--font-size-base-40);
+    }
+}
+
+/* Medium devices (desktops, 992px and up)*/
+
+@media (min-width: 992px) {
+    .title {}
+}
+
+/* Large devices (large desktops, 1200px and up)*/
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: var(--font-size-base-40);
+        line-height: var(--font-size-base-48);
+    }
+}
+
+/* Extra large devices (extra large desktops, 1440px and up)*/
+
+@media (min-width: 1440px) {
+    .title {}
+}
